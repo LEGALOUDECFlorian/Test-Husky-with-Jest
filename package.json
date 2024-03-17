@@ -1,0 +1,31 @@
+{
+  "name": "test-husky-with-jest",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint app",
+    "test": "jest",
+    "precommit": "npm run lint && npm test"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "babel-jest": "^29.7.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "husky": "^9.0.11",
+    "jest": "^29.7.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@jest/globals": "^29.7.0"
+  }
+}
